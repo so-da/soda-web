@@ -6,3 +6,13 @@ ul li {
   border-bottom: 1px solid black;
   padding: 16px 0;
 }
+
+li div {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.schedule {
+  background-color: green;
+  color: white;
+}
