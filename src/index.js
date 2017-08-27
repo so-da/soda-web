@@ -4,19 +4,21 @@ import {UIRouter, UIView, UISref, UISrefActive, pushStateLocationPlugin} from 'u
 
 // import './index.css';
 
+import Configuration from './Configuration';
+
 import registerServiceWorker from './registerServiceWorker';
 
 const Login = () => <h3>Login</h3>;
 const Signup = () => <h3>Signup</h3>;
 const List = () => <h3>List</h3>;
 const Detail = () => <h3>Detail</h3>;
-const Configuration = () => <h3>Configuration</h3>
+const ConfigurationComponent = () => <Configuration />
 
 let loginState = { name: 'login', url: '/login',  component: Login };
 let signupState = { name: 'signup', url: '/signup',  component: Signup };
 let listState = { name: 'list', url: '/list',  component: List };
 let detailState = { name: 'detail', url: '/detail',  component: Detail };
-let configurationState = { name: 'configuration', url: '/configuration',  component: Configuration };
+let configurationState = { name: 'configuration', url: '/configuration',  component: ConfigurationComponent };
 
 ReactDOM.render(
   <UIRouter plugins={[pushStateLocationPlugin]} states={[
