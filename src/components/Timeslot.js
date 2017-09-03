@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addSchedule} from '../actions/schedule';
+import {toggleHour} from '../actions/schedule';
 
 let Timeslot = ({ schedule, hour, onTimeslotClick }) => {
   return (
@@ -14,7 +14,7 @@ let Timeslot = ({ schedule, hour, onTimeslotClick }) => {
 const mapDispatchToProps = dispatch => {
   return {
     onTimeslotClick: id => {
-      dispatch(addSchedule(id))
+      dispatch(toggleHour(id))
     }
   }
 }
