@@ -7,19 +7,20 @@ import reducer from './reducers';
 
 // import './index.css';
 
+import Login from './Login';
 import Configuration from './Configuration';
 
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducer);
 
-const Login = () => <h3>Login</h3>;
+const LoginComponent = () => <Login store={store} />;
 const Signup = () => <h3>Signup</h3>;
 const List = () => <h3>List</h3>;
 const Detail = () => <h3>Detail</h3>;
 const ConfigurationComponent = () => <Configuration store={store} />
 
-let loginState = { name: 'login', url: '/login',  component: Login };
+let loginState = { name: 'login', url: '/login',  component: LoginComponent };
 let signupState = { name: 'signup', url: '/signup',  component: Signup };
 let listState = { name: 'list', url: '/list',  component: List };
 let detailState = { name: 'detail', url: '/detail',  component: Detail };
